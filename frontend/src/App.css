@@ -1,0 +1,8 @@
+nav {
+  padding: 0px !important;
+}
+
+.App, html, body, .Container {
+  background-color: rgb(247, 246, 240);
+  max-height: 100vh;
+}
