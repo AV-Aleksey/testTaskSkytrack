@@ -1,0 +1,37 @@
+.Nav__backgroundBlock {
+  background-color: rgb(228, 228, 228)
+}
+
+.Nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px !important;
+}
+
+.Nav__links a, .Nav__links a:hover {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  margin: 2px;
+}
+
+.Nav__links a {
+  transition: all ease-in-out 0.2s;
+  &:hover {
+    -webkit-box-shadow: 0px 4px 0px 0px rgba(121,91,240,1);
+    -moz-box-shadow: 0px 4px 0px 0px rgba(121,91,240,1);
+    box-shadow: 0px 4px 0px 0px rgba(121,91,240,1);
+  }
+  &.active {
+    -webkit-box-shadow: 0px 4px 0px 0px rgba(121,91,240,1);
+    -moz-box-shadow: 0px 4px 0px 0px rgba(121,91,240,1);
+    box-shadow: 0px 4px 0px 0px rgba(121,91,240,1);
+  }
+}
+
+
+
+
+
+
+

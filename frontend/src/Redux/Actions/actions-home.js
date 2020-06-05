@@ -1,7 +1,22 @@
-import { LOADING } from './action-types'
+import { REQUEST_IMG, LOADED_IMG, LOADING_START } from './action-types'
 
-export function loadingAC() {
+export function requestImgAC() {
   return {
-    type: LOADING
+    type: REQUEST_IMG,
+  }
+}
+
+export function loadedImgAC(imgUrl, name, date) {
+  return {
+    type: LOADED_IMG,
+    imgUrl,
+    name,
+    date
+  }
+}
+
+export function loadingStartAC() {
+  return {
+    type: LOADING_START
   }
 }

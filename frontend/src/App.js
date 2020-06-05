@@ -1,10 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
+import './variable.scss'
 //Components
-import Nav from './Components/Common/Nav.jsx'
-import Home from './Components/Pages/Home.jsx'
-import History from './Components/Pages/History.jsx'
+import Nav from './Components/Common/Nav/Nav.jsx'
+import Home from './Components/Pages/Home/Home.jsx'
+import History from './Components/Pages/History/History.jsx'
+import Footer from './Components/Common/Footer/Footer.jsx'
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         </Route>
       </Switch>
 
+      <Footer />
     </div>
   );
 }

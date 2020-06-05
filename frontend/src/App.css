@@ -1,8 +1,36 @@
 nav {
   padding: 0px !important;
 }
+html, body, #root, .App  {
+  min-height: 100vh;
+}
 
-.App, html, body, .Container {
+.App, html, body{
   background-color: rgb(247, 246, 240);
-  max-height: 100vh;
+}
+
+.activeLink {
+  background-color: rgb(221, 221, 221);
+}
+
+.sectionTitle {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.btnDeleteImg {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  border: none;
+  padding: 0px 9.5px 2px 9.5px;
+  border-radius: 50%;
+  transition: all ease-in-out 0.2s;
+  color: rgb(221, 39, 39);
+  border: 2px solid  rgb(221, 39, 39);
+}
+
+.btnDeleteImg:hover {
+  transform: scale(1.2);
 }

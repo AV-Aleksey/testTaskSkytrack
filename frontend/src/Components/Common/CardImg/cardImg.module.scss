@@ -1,0 +1,30 @@
+@import '../../../variable.scss';
+
+.card {
+  max-width: fit-content;
+  position: relative;
+  @include shadow;
+  margin: 10px;
+  img {
+    max-width: 500px;
+  }
+  .card__infoBlock {
+    text-align: center;
+
+    p {
+      max-width: 120px;
+      white-space: nowrap; /* Запрещаем перенос строк */
+      overflow: hidden; /* Обрезаем все, что не помещается в область */
+      text-overflow: ellipsis; /* Добавляем многоточие */
+      margin: 0px auto;
+    }
+    .card__date {
+      color: $colorSmallText;
+    }
+    hr {
+      margin: 0px;
+    }
+  }
+}
+
+

@@ -4,6 +4,8 @@ import createSagaMiddleware from 'redux-saga'
 import { commonReducer } from './Reducers/commonReducer'
 import { historyReducer } from './Reducers/historyReducer'
 import { homeReducer } from './Reducers/homeReducer'
+//Sagas
+import { sagaWatcher } from './Saga/sagas'
 
 const saga = createSagaMiddleware()
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -15,5 +17,5 @@ const rootReducer = combineReducers({
 })
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(saga)))
-
+saga.run(sagaWatcher)
 export default store
