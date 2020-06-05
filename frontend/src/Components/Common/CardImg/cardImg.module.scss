@@ -3,6 +3,7 @@
 .card {
   max-width: fit-content;
   position: relative;
+  background: #fff;
   @include shadow;
   margin: 10px;
   img {

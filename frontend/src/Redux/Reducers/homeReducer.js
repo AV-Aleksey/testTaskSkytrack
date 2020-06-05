@@ -7,6 +7,7 @@ const initialState = {
   imgUrl: '',
   date: '',
   name: '',
+  id: '',
   isLoaded: false,
 }
 
@@ -24,6 +25,7 @@ export function homeReducer(state = initialState, action) {
         imgUrl: action.imgUrl,
         date: action.date,
         name: action.name,
+        id: action.id,
         isLoaded: true,
       }
     default:

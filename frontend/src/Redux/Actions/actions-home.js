@@ -6,12 +6,13 @@ export function requestImgAC() {
   }
 }
 
-export function loadedImgAC(imgUrl, name, date) {
+export function loadedImgAC(imgUrl, name, date, id) {
   return {
     type: LOADED_IMG,
     imgUrl,
     name,
-    date
+    date,
+    id
   }
 }
 

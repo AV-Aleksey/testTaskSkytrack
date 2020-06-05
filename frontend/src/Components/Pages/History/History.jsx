@@ -10,6 +10,7 @@ import Pagination from './Pagination/Pagination.jsx'
 
 
 export default function History() {
+
   const data = useSelector((state) => state.historyReducer.imgCollection)
   const { pageSize, currentPage } = useSelector((state) => state.historyReducer)
   const imgChunk = _.chunk(data, pageSize)
@@ -22,11 +23,18 @@ export default function History() {
         <div className={scss.collectionImg__wrap}>
           {
             imgChunk.length > 0
-              ? imgChunk[currentPage - 1].map(card => {
-                return <CardImg {...card}>
-                  <button className='btnDeleteImg'>x</button>
-                </CardImg>
-              })
+              ?
+              imgChunk[currentPage - 1]
+                ? imgChunk[currentPage - 1].map(card => {
+                  return <CardImg key={card.id} {...card}>
+                    <button className='btnDeleteImg'>x</button>
+                  </CardImg>
+                })
+                : imgChunk[imgChunk.length - 1].map(card => {
+                  return <CardImg key={card.id} {...card}>
+                    <button className='btnDeleteImg'>x</button>
+                  </CardImg>
+                })
               : <small>Нет загруженных картинок...</small>
           }
         </div>

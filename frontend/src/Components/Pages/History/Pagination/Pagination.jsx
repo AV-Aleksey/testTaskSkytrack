@@ -44,10 +44,10 @@ const Pagination = () => {
         </li>
         {
           pages.map(link => {
-            return <li className="page-item">
+            return <li key={link} className="page-item">
               <a
                 onClick={changePage}
-                data-currentPage={link}
+                data-currentpage={link}
                 className={+link === +currentPage ? "page-link activeLink" : "page-link"}
                 href="#"
                 id={'pageLink-' + link}>
