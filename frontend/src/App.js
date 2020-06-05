@@ -15,11 +15,10 @@ function App() {
 
   const { errorMessage, } = useSelector((state) => state.commonReducer)
 
-
+  
   return (
     <div className="App">
       <Nav />
-
       <Switch>
         <Route path="/history">
           <History />
@@ -28,13 +27,9 @@ function App() {
           <Home />
         </Route>
       </Switch>
-
       <Footer />
 
-
       <Alert errorMessage={errorMessage} />
-
-
     </div>
   );
 }
